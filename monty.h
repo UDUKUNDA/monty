@@ -58,4 +58,5 @@ void push_it(stack_t **head, unsigned int lnNUmber);
 void free_stack(stack_t *head);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void pall_it(stack_t **head, unsigned int lnNumber);
+void pint_it(stack_t **head, unsigned int lnNumber);
 #endif
