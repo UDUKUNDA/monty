@@ -59,4 +59,5 @@ void free_stack(stack_t *head);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void pall_it(stack_t **head, unsigned int lnNumber);
 void pint_it(stack_t **head, unsigned int lnNumber);
+void pop_it(stack_t **head, unsigned int lineNumber);
 #endif

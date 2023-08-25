@@ -9,8 +9,9 @@
 */
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
-	instruction_t opst[] = {
+	instruction_t oparr[] = {
 		{"push", push_it}, {"pall", pall_it}, {"pint", pint_it},
+		{"pop", pop_it},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
@@ -20,16 +21,16 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	while (opst[i].opcode && op)
+	while (oparr[i].opcode && op)
 	{
-		if (strcmp(op, opst[i].opcode) == 0)
+		if (strcmp(op, oparr[i].opcode) == 0)
 		{
-			opst[i].f(stack, counter);
+			oparr[i].f(stack, counter);
 			return (0);
 		}
 		i++;
 	}
-	if (op && opst[i].opcode == NULL)
+	if (op && oparr[i].opcode == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
