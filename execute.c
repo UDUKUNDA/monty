@@ -14,14 +14,14 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		{"pop", pop_it},
 		{NULL, NULL}
 	};
-	unsigned int i = 0;
-	char *op;
+	unsigned int i = (0);
+	char *op = strtok(content, " \n\t");
 
-	var.agmt = strtok(NULL, " \n\t");
-	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	while (oparr[i].opcode && op)
+	var.agmt = strtok(NULL, " \n\t");
+
+	while (oparr[i].opcode)
 	{
 		if (strcmp(op, oparr[i].opcode) == 0)
 		{
@@ -30,11 +30,10 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		}
 		i++;
 	}
-	if (op && oparr[i].opcode == NULL)
+	if (op)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
-		free(content);
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}

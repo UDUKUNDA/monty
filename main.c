@@ -1,5 +1,4 @@
 #include "monty.h"
-#include <stdio.h>
 var_t var = {NULL, NULL, NULL, 0};
 /**
  * main - the interpreter
