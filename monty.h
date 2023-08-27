@@ -61,4 +61,5 @@ void pall_it(stack_t **head, unsigned int lnNumber);
 void pint_it(stack_t **head, unsigned int lnNumber);
 void pop_it(stack_t **head, unsigned int lineNumber);
 void swap_it(stack_t **head, unsigned int lnNumber);
+void add_it(stack_t **head, unsigned int lnNumber);
 #endif
