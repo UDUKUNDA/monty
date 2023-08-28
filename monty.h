@@ -62,4 +62,15 @@ void pint_it(stack_t **head, unsigned int lnNumber);
 void pop_it(stack_t **head, unsigned int lineNumber);
 void swap_it(stack_t **head, unsigned int lnNumber);
 void add_it(stack_t **head, unsigned int lnNumber);
+void nop_it(stack_t **head, unsigned int lnNumber);
+void sub_it(stack_t **head, unsigned int lnNumber);
+void div_it(stack_t **head, unsigned int lnNumber);
+void mul_it(stack_t **head, unsigned int lnNumber);
+void mod_it(stack_t **head, unsigned int lnNumber);
+void pchar_it(stack_t **head, unsigned int lnNUmber);
+void pstr_it(stack_t **head, unsigned int lnNumber);
+void rotl_it(stack_t **head, unsigned int lnNumber);
+void rotr_it(stack_t **head, __attribute__((unused)) unsigned int lnNumber);
+void queue_it(stack_t **head, unsigned int lnNumber);
+void stack_it(stack_t **head, unsigned int lnNumber);
 #endif

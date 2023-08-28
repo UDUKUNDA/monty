@@ -11,9 +11,10 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t oparr[] = {
 		{"push", push_it}, {"pall", pall_it}, {"pint", pint_it},
-		{"pop", pop_it},
-		{"swap", swap_it},
-		{"add",add_it},
+		{"pop", pop_it}, {"swap", swap_it}, {"add", add_it}, {"nop", nop_it},
+		{"sub", sub_it}, {"div", div_it}, {"mul", mul_it}, {"mod", mod_it},
+		{"pchar", pchar_it}, {"pstr", pstr_it}, {"rotl", rotl_it},
+		{"rotr", rotr_it}, {"queue", queue_it}, {"stack", stack_it},
 		{NULL, NULL}
 	};
 	unsigned int i = (0);
